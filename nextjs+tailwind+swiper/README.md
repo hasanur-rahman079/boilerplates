@@ -12,3 +12,11 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Demo
+
+Desktop View with SLide
+![screenshort](/nextjs%2Btailwind%2Bswiper/public/images/screenshort.png)
+
+Desktop View for mobile
+![screenshort](/nextjs%2Btailwind%2Bswiper/public/images/phoneViewScr.png)

@@ -7,9 +7,9 @@ import {codeInput} from '@sanity/code-input'
 
 export default defineConfig({
   name: 'default',
-  title: 'stemcIUB',
+  title: 'your project title',
 
-  projectId: '71e8qa24',
+  projectId: 'your project id',
   dataset: 'production',
 
   plugins: [
