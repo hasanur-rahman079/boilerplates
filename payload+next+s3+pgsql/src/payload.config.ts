@@ -9,6 +9,10 @@ import sharp from "sharp";
 
 import { Users } from "./collections/Users";
 import { Media } from "./collections/Media";
+import { Posts } from "./collections/Posts";
+import { Categories } from "./collections/Categories";
+import { plugins } from "./plugins";
+import { getServerSideURL } from "./utils/getURL";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -19,8 +23,31 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    livePreview: {
+      breakpoints: [
+        {
+          label: "Mobile",
+          name: "mobile",
+          width: 375,
+          height: 667,
+        },
+        {
+          label: "Tablet",
+          name: "tablet",
+          width: 768,
+          height: 1024,
+        },
+        {
+          label: "Desktop",
+          name: "desktop",
+          width: 1440,
+          height: 900,
+        },
+      ],
+    },
   },
-  collections: [Users, Media],
+  collections: [Users, Media, Posts, Categories],
+  cors: [getServerSideURL()].filter(Boolean),
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {
@@ -52,5 +79,6 @@ export default buildConfig({
         forcePathStyle: true,
       },
     }),
+    ...plugins,
   ],
 });

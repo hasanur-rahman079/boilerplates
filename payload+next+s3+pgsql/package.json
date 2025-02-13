@@ -15,7 +15,9 @@
   },
   "dependencies": {
     "@payloadcms/db-postgres": "^3.20.0",
+    "@payloadcms/live-preview-react": "^3.20.0",
     "@payloadcms/next": "^3.20.0",
+    "@payloadcms/plugin-seo": "^3.20.0",
     "@payloadcms/richtext-lexical": "^3.20.0",
     "@payloadcms/storage-s3": "^3.20.0",
     "cross-env": "^7.0.3",
@@ -25,7 +27,8 @@
     "plaiceholder": "^3.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "tailwind-merge": "^3.0.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
